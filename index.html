@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>متحف الذكريات</title>
+  </head>
+  <body>
+    <div id="hearts-container"></div>
+    <!-- الاغنيه -->
+    <div class="music">
+      <figure>
+        <img src="img/download.webp" alt="" />
+      </figure>
+      <div class="range">
+        <h4>زي م انتي</h4>
+        <input type="range" dir="ltr" id="range" value="0" />
+      </div>
+      <div class="controls">
+        <button type="button" id="forward">
+          <i class="fa-solid fa-forward"></i>
+        </button>
+        <button type="button" id="play-btn">
+          <i class="fa-solid fa-play"></i>
+        </button>
+        <button type="button" id="backward">
+          <i class="fa-solid fa-backward"></i>
+        </button>
+      </div>
+      <audio src="music/10._Zay_Manty.mp3" style="display: none"></audio>
+    </div>
+    <!-- hero -->
+    <section class="head active">
+      <h1>كل سنه و أنتِ طيبه يا أغلي حد في حياتي💗</h1>
+      <figure>
+        <img src="" alt="" />
+      </figure>
+      <button
+        type="button"
+        class="next-btn"
+        onclick="
+          document
+            .querySelectorAll('section')
+            .forEach((section) => section.classList.remove('active'));
+          date.classList.add('active');
+        "
+      >
+        Next
+      </button>
+      <!-- date -->
+    </section>
+    <section class="date" id="date">
+      <div class="dateWeMet">
+        <h2>بقالنا مع بعض</h2>
+        <p id="count"></p>
+      </div>
+      <button
+        type="button"
+        class="next-btn"
+        onclick="
+          document
+            .querySelectorAll('section')
+            .forEach((section) => section.classList.remove('active'));
+          memo.classList.add('active');
+        "
+      >
+        Next
+      </button>
+    </section>
+    <!-- memories -->
+    <section class="memories" id="memo">
+      <div class="img-preview" id="img-preview">
+        <button type="button" id="close">x</button>
+        <figure>
+            <img id="img-show" src="" alt="" />
+        </figure>
+      </div>
+      <h2>ذكرياتنا مع بعض 💗</h2>
+      <div class="imgs">
+        <figure>
+          <img src="img/images.png" alt="" />
+        </figure>
+
+        <figure>
+          <img src="img/download.webp" alt="" />
+        </figure>
+
+        <figure>
+          <img src="" alt="" />
+        </figure>
+
+        <figure>
+          <img src="" alt="" />
+        </figure>
+
+        <figure>
+          <img src="" alt="" />
+        </figure>
+
+        <figure>
+          <img src="" alt="" />
+        </figure>
+      </div>
+      <button
+        type="button"
+        class="next-btn"
+        onclick="
+          document
+            .querySelectorAll('section')
+            .forEach((section) => section.classList.remove('active'));
+          message.classList.add('active');
+        "
+      >
+        Next
+      </button>
+    </section>
+    <!-- message -->
+    <section class="message" id="message">
+      <h2>رساله ليكي 💗</h2>
+      <p>دوسي عليها عشان تفتح</p>
+      <div class="letter">
+        <figure
+          onclick="
+            this.classList.add('hide');
+            last.classList.add('show');
+          "
+        >
+          <img src="img/images.png" alt="" />
+        </figure>
+        <p>
+          كل سنه و انتي طيبه يا حبيبتي، انتي مش بس نصفي التاني، انتي كل حياتي.
+          بحبك اكتر من اي حاجه في الدنيا، و بتمنى نفضل مع بعض طول العمر. شكرا
+          لوجودك في حياتي و لجعلها اجمل بكتير. كل سنه و انتي طيبه يا حبيبتي.
+        </p>
+      </div>
+      <button
+        type="button"
+        id="last"
+        class="next-btn"
+        onclick="
+          document
+            .querySelectorAll('section')
+            .forEach((section) => section.classList.remove('active'));
+          document.querySelector('.gift').classList.add('active');
+        "
+      >
+        شوفي هديتك
+      </button>
+    </section>
+    <!-- gift -->
+    <section class="gift" id="gift">
+      <h2>و اخيرًا هديتك الالكترونيه 💌</h2>
+      <p>دوسي علي الصندوق عشان تشوفي هديتك</p>
+      <div id="gift-box" class="gift-box">🎁</div>
+      <div id="secret-message" class="secret-message glass-inner hidden">
+        <p>
+          "حبيبتي الغالية، لو كان بإمكاني أن أهديكِ الدنيا لجمعتها بين يديكِ.
+          شكراً لأنكِ في حياتي، شكراً لكل ضحكة وكل لحظة أمان بجانبك. أحبكِ
+          اليوم، وغداً، وإلى نهاية العمر." 🫶🏻
+        </p>
+      </div>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+</html>
