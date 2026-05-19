@@ -156,8 +156,9 @@ input[type="range"]::-webkit-slider-thumb {
 }
 /* hero */
 .head {
+  padding-top: 6em;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 30px;
   flex-direction: column;
@@ -207,9 +208,10 @@ input[type="range"]::-webkit-slider-thumb {
 }
 /* date */
 .date {
+  padding-top: 6em;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   gap: 40px;
   height: 100vh;
@@ -320,8 +322,9 @@ input[type="range"]::-webkit-slider-thumb {
 }
 /* message */
 .message {
+  padding-top: 6em;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   gap: 30px;
@@ -382,11 +385,12 @@ input[type="range"]::-webkit-slider-thumb {
 /* gift */
 .gift {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   gap: 20px;
   height: 100vh;
+  padding-top: 6em;
 }
 
 .gift-box {
